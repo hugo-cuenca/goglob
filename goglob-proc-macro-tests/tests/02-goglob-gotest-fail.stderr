@@ -1,0 +1,65 @@
+error: pattern malformed: special character ] at 1 not escaped with '\'
+ --> tests/02-goglob-gotest-fail.rs:3:39
+  |
+3 | const PATTERN_01: GlobPattern = glob!("[]a]");
+  |                                       ^^^^^^
+
+error: pattern malformed: special character - at 1 not escaped with '\'
+ --> tests/02-goglob-gotest-fail.rs:4:39
+  |
+4 | const PATTERN_02: GlobPattern = glob!("[-]");
+  |                                       ^^^^^
+
+error: pattern malformed: special character ] at 3 not escaped with '\'
+ --> tests/02-goglob-gotest-fail.rs:5:39
+  |
+5 | const PATTERN_03: GlobPattern = glob!("[x-]");
+  |                                       ^^^^^^
+
+error: pattern malformed: special character - at 1 not escaped with '\'
+ --> tests/02-goglob-gotest-fail.rs:6:39
+  |
+6 | const PATTERN_04: GlobPattern = glob!("[-x]");
+  |                                       ^^^^^^
+
+error: pattern malformed: illegal use of '\' at 0: end of pattern
+ --> tests/02-goglob-gotest-fail.rs:7:39
+  |
+7 | const PATTERN_05: GlobPattern = glob!("\\");
+  |                                       ^^^^
+
+error: pattern malformed: special character - at 4 not escaped with '\'
+ --> tests/02-goglob-gotest-fail.rs:8:39
+  |
+8 | const PATTERN_06: GlobPattern = glob!("[a-b-c]");
+  |                                       ^^^^^^^^^
+
+error: pattern malformed: character class opened with '[' at 0 isn't closed
+ --> tests/02-goglob-gotest-fail.rs:9:39
+  |
+9 | const PATTERN_07: GlobPattern = glob!("[");
+  |                                       ^^^
+
+error: pattern malformed: character class opened with '[' at 0 isn't closed
+  --> tests/02-goglob-gotest-fail.rs:10:39
+   |
+10 | const PATTERN_08: GlobPattern = glob!("[^");
+   |                                       ^^^^
+
+error: pattern malformed: character class opened with '[' at 0 isn't closed
+  --> tests/02-goglob-gotest-fail.rs:11:39
+   |
+11 | const PATTERN_09: GlobPattern = glob!("[^bc");
+   |                                       ^^^^^^
+
+error: pattern malformed: character class opened with '[' at 1 isn't closed
+  --> tests/02-goglob-gotest-fail.rs:12:39
+   |
+12 | const PATTERN_10: GlobPattern = glob!("a[");
+   |                                       ^^^^
+
+error: pattern malformed: character class opened with '[' at 3 isn't closed
+  --> tests/02-goglob-gotest-fail.rs:13:39
+   |
+13 | const PATTERN_11: GlobPattern = glob!("a/b[");
+   |                                       ^^^^^^

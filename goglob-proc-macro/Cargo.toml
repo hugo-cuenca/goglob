@@ -1,0 +1,22 @@
+[package]
+name = "goglob-proc-macro"
+version = "0.2.0"
+description = "Internal library used by goglob, not for public use"
+authors = ["Hugo Cuenca <hugo.cuenca.arana@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/hugo-cuenca/goglob/"
+repository = "https://github.com/hugo-cuenca/goglob/"
+license = "BSD-3-Clause"
+exclude = [
+    ".idea/*",
+]
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+goglob-common = "0.2.0"
+proc-macro2 = "1.0.37"
+syn = "1.0.91"
+quote = "1.0.18"

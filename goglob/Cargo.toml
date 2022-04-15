@@ -1,0 +1,23 @@
+[package]
+name = "goglob"
+version = "0.2.0"
+description = "Shell pattern matching similar to golang's path.Match"
+authors = ["Hugo Cuenca <hugo.cuenca.arana@gmail.com>"]
+readme = "../README.md"
+homepage = "https://github.com/hugo-cuenca/goglob/"
+repository = "https://github.com/hugo-cuenca/goglob/"
+license = "BSD-3-Clause"
+categories = ["filesystem"]
+keywords = ["glob", "path", "go", "pattern", "regex"]
+exclude = [
+    ".idea/*",
+]
+edition = "2021"
+
+[dependencies]
+goglob-common = "0.2.0"
+goglob-proc-macro = { version = "0.2.0", optional = true }
+
+[features]
+proc-macro = ["dep:goglob-proc-macro"]
+serde = ["goglob-common/serde"]

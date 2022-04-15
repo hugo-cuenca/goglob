@@ -1,0 +1,21 @@
+[package]
+name = "goglob-serde-tests"
+version = "0.2.0"
+description = "Internal library used for testing goglob, not for public use"
+authors = ["Hugo Cuenca <hugo.cuenca.arana@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/hugo-cuenca/goglob/"
+repository = "https://github.com/hugo-cuenca/goglob/"
+license = "BSD-3-Clause"
+exclude = [
+    ".idea/*",
+]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+goglob = { version = "0.2.0", features = ["serde"] }
+serde = { version = "1.0.136", features = ["derive"] }
+serde_json = "1.0.79"
+serde_test = "1.0.136"

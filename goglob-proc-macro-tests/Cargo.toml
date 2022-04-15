@@ -1,0 +1,24 @@
+[package]
+name = "goglob-proc-macro-tests"
+version = "0.2.0"
+description = "Internal library used for testing goglob, not for public use"
+authors = ["Hugo Cuenca <hugo.cuenca.arana@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/hugo-cuenca/goglob/"
+repository = "https://github.com/hugo-cuenca/goglob/"
+license = "BSD-3-Clause"
+exclude = [
+    ".idea/*",
+]
+edition = "2021"
+autotests = false
+
+[[test]]
+name = "tests"
+path = "tests/0000-main.rs"
+
+[dependencies]
+
+[dev-dependencies]
+goglob = { version = "0.2.0", features= ["proc-macro"] }
+trybuild = "1.0.59"

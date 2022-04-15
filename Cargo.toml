@@ -1,0 +1,13 @@
+[workspace]
+members = [
+    "goglob",
+    "goglob-common",
+    "goglob-proc-macro",
+    "goglob-proc-macro-tests",
+    "goglob-serde-tests",
+]
+
+[patch.crates-io]
+goglob = { path = "goglob" }
+goglob-common = { path = "goglob-common" }
+goglob-proc-macro = { path = "goglob-proc-macro" }
