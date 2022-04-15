@@ -23,11 +23,11 @@ character-range:
 
 Match requires pattern to match all of name, not just a substring.
 
-Use [`GlobPattern::new(pattern)`][GlobPattern::new] to construct a new instance.
+Use `GlobPattern::new(pattern)` to construct a new instance.
 
 ## Features
 * `proc-macro`: allows using the `glob!("<PATTERN>")` procedural macro (see
-  [glob!()][glob]).
+  `glob!()`).
 * `serde`: enables serde deserialization of string patterns.
 
 ## License
